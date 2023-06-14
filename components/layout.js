@@ -1,5 +1,4 @@
 import { useTheme } from "next-themes";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Layout({ children, home }) {
@@ -23,7 +22,7 @@ export default function Layout({ children, home }) {
 
   return (
     <div className="bg-white text-slate-800 dark:bg-slate-800 dark:text-white">
-      <div className="mx-auto max-w-lg px-4 py-8 md:max-w-lg lg:max-w-xl lg:px-0 xl:max-w-2xl">
+      <div className="mx-auto flex min-h-screen max-w-lg flex-col justify-between px-4 py-8 md:max-w-lg lg:max-w-xl lg:px-0 xl:max-w-2xl">
         <main>{children}</main>
         <footer className="flex flex-row justify-between pt-20">
           <div className="flex w-1/2 flex-row justify-between">
@@ -34,11 +33,9 @@ export default function Layout({ children, home }) {
               <span>↗ contact me by email</span>
             </a>
           </div>
-          <button
-            id="btn"
-            className="duration-200"
-            onClick={changeTheme}
-          >Theme: ☀</button>
+          <button id="btn" className="duration-200" onClick={changeTheme}>
+            Theme: ☀
+          </button>
         </footer>
       </div>
     </div>

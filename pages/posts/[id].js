@@ -22,7 +22,10 @@ export default function Post({ postData }) {
           </span>
         </div>
         {/* FIXME - fix the way the markdown is displayed */}
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className="prose prose-slate dark:prose-invert"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </div>
       {/* TODO - add like and share also */}
       <Comments />

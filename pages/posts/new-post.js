@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { useState } from "react";
 import Layout from "../../components/layout";
 
+// FIXME - fix the new post editor
 let CustomEditor = dynamic(() => import("../../components/customEditor"), {
   ssr: false,
 });
